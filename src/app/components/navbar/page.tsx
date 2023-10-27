@@ -131,7 +131,6 @@ const RightButton = styled.button`
   margin-left: 10px;
   width: auto;
 `;
-
 const Navbar = () => {
   // Use state to keep track of the selected page with a default value of 3
   const [selectedPage, setSelectedPage] = useState(0);
@@ -156,6 +155,7 @@ const Navbar = () => {
               
             </Dropdown>
             <DropdownArrow>&#9662;</DropdownArrow>
+          
             <Page onClick={() => setSelectedPage(3)} pname="Video Series">
               Video Series
             </Page>

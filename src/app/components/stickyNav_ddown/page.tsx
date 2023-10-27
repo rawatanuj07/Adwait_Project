@@ -20,7 +20,6 @@ const DropdownContent = styled.div`
 `;
 
 const DropdownContainer = styled(Dropdown)`
-  border: 1px solid grey;
   width: auto;
   margin-left: 9px;
   height: 36px;
@@ -44,8 +43,7 @@ const SDdown = () => {
   }
 
   const [englishValues, setEnglishValues] = useState([]); // State to store English values from the API
-  const [parentOn, setParentOn] = useState([]); // State to store English values from the API
-  console.log("parentOnesss is", parentOn);
+  const [parent1, setparent1] = useState([]); // State to store English values from the API
   const [parent3, setParent3] = useState([]);
   const [parent4, setParent4] = useState([]);
   const [parent5, setParent5] = useState([]);
@@ -75,11 +73,11 @@ const SDdown = () => {
           (item: { parent: number }) => item.parent === 1
         );
         console.log("ffilteredData is", ffilteredData);
-        const parentOne = ffilteredData.map(
+        const parent1e = ffilteredData.map(
           (item: { name: { english: any } }) => item.name.english
         );
-        setParentOn(parentOne); // Update state with English values
-        console.log("parentOne is", parentOne);
+        setparent1(parent1e); // Update state with English values
+        console.log("parent1e is", parent1e);
 
         //Extract the nested items where "parent" is 3, for the first element of "first-Level dropdown"
         const filteredData3 = odata.filter(
@@ -134,7 +132,7 @@ const SDdown = () => {
     <DropdownContainer>
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          <Menu.Button className=" inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
             All
             <ChevronDownIcon
               className="-mr-1 h-5 w-5 text-gray-400"
@@ -151,156 +149,204 @@ const SDdown = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-100 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items
+            style={{ width: "250px" }}
+            className="absolute right-100 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          >
             <div className="py-1">
               <Menu.Item>
                 {({ active }) => (
-                  <a
-                    href="#"
+                  <div
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      active
+                        ? "bg-gray-100 text-gray-900 hover:text-red-500"
+                        : "text-gray-700 hover:text-red-500",
                       "block px-4 py-2 text-sm"
                     )}
                   >
                     All
-                  </a>
+                  </div>
                 )}
               </Menu.Item>
 
               {englishValues.map((value, index) => (
                 <Menu.Item key={index}>
                   {({ active }) => (
-                    <a
-                      href="#"
+                    <div
                       className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm relative group"
+                        active
+                          ? "bg-gray-100 text-gray-900 hover:text-red-500"
+                          : "text-gray-700 hover:text-red-500",
+                        "block px-4 py-2 text-sm relative group flex items-center"
                       )}
                     >
-                      {value}
+                      {value}{" "}
+                      {index !== 1 && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="7"
+                          height="11"
+                          viewBox="0 0 7 11"
+                          className="fill-current absolute right-2.5"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M.793 10.207a1 1 0 0 1 0-1.414L4.086 5.5.793 2.207A1 1 0 0 1 2.207.793l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0Z"
+                          ></path>
+                        </svg>
+                      )}
                       {index == 0 && (
-                        <div className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block">
-                          {" "}
+                        <div
+                          style={{
+                            maxHeight: "400px", // Set your preferred maximum height
+                            width: "250px",
+                            overflowY: "auto", // Enable vertical scrollbar when needed
+                          }}
+                          className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block"
+                        >
                           {/* Position the nested items */}
-                          {parentOn.map((nestedItem, nestedIndex) => (
+                          {parent1.map((nestedItem, nestedIndex) => (
                             <Menu.Item key={nestedIndex}>
                               {({ active }) => (
-                                <a
-                                  href="#"
+                                <div
                                   className={classNames(
                                     active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700",
+                                      ? "bg-gray-100 text-gray-900 hover:text-red-500"
+                                      : "text-gray-700 hover:text-red-500",
                                     "block px-4 py-2 text-sm"
                                   )}
                                 >
                                   {nestedItem}
-                                </a>
+                                </div>
                               )}
                             </Menu.Item>
                           ))}
                         </div>
                       )}
-
                       {index == 2 && (
-                        <div className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block">
+                        <div
+                          style={{
+                            maxHeight: "300px", // Set your preferred maximum height
+                            width: "250px",
+
+                            overflowY: "auto", // Enable vertical scrollbar when needed
+                          }}
+                          className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block"
+                        >
                           {" "}
                           {/* Position the nested items */}
                           {parent3.map((nestedItem, nestedIndex) => (
                             <Menu.Item key={nestedIndex}>
                               {({ active }) => (
-                                <a
-                                  href="#"
+                                <div
                                   className={classNames(
                                     active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700",
-                                    "block px-4 py-2 text-sm"
+                                      ? "bg-gray-100 text-gray-900 hover:text-red-500"
+                                      : "text-gray-700 hover:text-red-500",
+                                    "block px-4 py-2 text-sm "
                                   )}
                                 >
                                   {nestedItem}
-                                </a>
+                                </div>
                               )}
                             </Menu.Item>
                           ))}
                         </div>
                       )}
-
                       {index == 3 && (
-                        <div className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block">
+                        <div
+                          style={{
+                            maxHeight: "300px", // Set your preferred maximum height
+                            width: "250px",
+
+                            overflowY: "auto", // Enable vertical scrollbar when needed
+                          }}
+                          className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block"
+                        >
                           {" "}
                           {/* Position the nested items */}
                           {parent4.map((nestedItem, nestedIndex) => (
                             <Menu.Item key={nestedIndex}>
                               {({ active }) => (
-                                <a
-                                  href="#"
+                                <div
                                   className={classNames(
                                     active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700",
+                                      ? "bg-gray-100 text-gray-900 hover:text-red-500"
+                                      : "text-gray-700 hover:text-red-500",
+
                                     "block px-4 py-2 text-sm"
                                   )}
                                 >
                                   {nestedItem}
-                                </a>
+                                </div>
                               )}
                             </Menu.Item>
                           ))}
                         </div>
                       )}
+                      {index == 4 && (
+                        <div
+                          style={{
+                            maxHeight: "300px", // Set your preferred maximum height
+                            width: "250px",
 
-
-
-{index == 4 && (
-                        <div className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block">
+                            overflowY: "auto", // Enable vertical scrollbar when needed
+                          }}
+                          className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block"
+                        >
                           {" "}
                           {/* Position the nested items */}
                           {parent5.map((nestedItem, nestedIndex) => (
                             <Menu.Item key={nestedIndex}>
                               {({ active }) => (
-                                <a
-                                  href="#"
+                                <div
                                   className={classNames(
                                     active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700",
+                                      ? "bg-gray-100 text-gray-900 hover:text-red-500"
+                                      : "text-gray-700 hover:text-red-500",
+
                                     "block px-4 py-2 text-sm"
                                   )}
                                 >
                                   {nestedItem}
-                                </a>
+                                </div>
                               )}
                             </Menu.Item>
                           ))}
                         </div>
                       )}
+                      {index == 5 && (
+                        <div
+                          style={{
+                            maxHeight: "300px", // Set your preferred maximum height
+                            width: "250px",
 
-
-{index == 5 && (
-                        <div className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block">
+                            overflowY: "auto", // Enable vertical scrollbar when needed
+                          }}
+                          className="absolute left-full top-0 mt-2 py-1 px-2 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block"
+                        >
                           {" "}
                           {/* Position the nested items */}
                           {parent6.map((nestedItem, nestedIndex) => (
                             <Menu.Item key={nestedIndex}>
                               {({ active }) => (
-                                <a
-                                  href="#"
+                                <div
                                   className={classNames(
                                     active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700",
+                                      ? "bg-gray-100 text-gray-900 hover:text-red-500"
+                                      : "text-gray-700 hover:text-red-500",
+
                                     "block px-4 py-2 text-sm"
                                   )}
                                 >
                                   {nestedItem}
-                                </a>
+                                </div>
                               )}
                             </Menu.Item>
                           ))}
                         </div>
                       )}
-                    </a>
+                    </div>
                   )}
                 </Menu.Item>
               ))}
