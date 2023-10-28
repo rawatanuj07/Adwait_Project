@@ -6,6 +6,8 @@ export default function Home() {
     <div>
       <Navbar />
       <StickyNavbar />
+        <hr className="mt-1 h-[0.5px] w-full bg-gray-separator tab:mt-2" />
+
       <Main />
     </div>
   )

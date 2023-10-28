@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Cards from "../cards/page";
 import {
   FaFacebookF,
   FaTwitter,
@@ -37,7 +38,6 @@ export default function Main() {
     lineHeight: "40px",
     marginRight: "40px",
     marginTop: "10px",
-
   };
   const icons = [
     { Component: FaFacebookF, color: "#3b5998" },
@@ -50,7 +50,7 @@ export default function Main() {
       <h1 className="font-bold text-2xl my-4 py-2">{heading}</h1>
       <div style={{ display: "flex" }}>
         <img src="/assets/image.jpg" alt="Example Image" />
-        
+
         <div>
           <h1
             style={{ display: "flex", marginLeft: "200px " }}
@@ -64,31 +64,35 @@ export default function Main() {
         </div>
       </div>
 
-
-
-
       {/* SOCIAL_ICONS  START*/}
-      <div >
-      <h1 style={{ marginLeft: "10px ", marginTop: "10px" }}>Share this series:</h1>
+      <div>
+        <h1 style={{ marginLeft: "10px ", marginTop: "10px" }}>
+          Share this series:
+        </h1>
 
-          {icons.map(({ Component, color }, index) => (
-            <a
-              href="#"
-              key={index}
-              onMouseEnter={() => setHoveredIcon(index)}
-              onMouseLeave={() => setHoveredIcon(null)}
-            >
-              <Component 
-                style={{
-                  ...iconStyle,
-                  backgroundColor: hoveredIcon === index ? color : "#fff",
-                  color: hoveredIcon === index ? "#fff" : color,
-                  // height: "35px", width: "35px "
-                }}
-              />
-            </a>
-          ))}
-        </div>
+        {icons.map(({ Component, color }, index) => (
+          <a
+            href="#"
+            key={index}
+            onMouseEnter={() => setHoveredIcon(index)}
+            onMouseLeave={() => setHoveredIcon(null)}
+          >
+            <Component
+              style={{
+                ...iconStyle,
+                backgroundColor: hoveredIcon === index ? color : "#fff",
+                color: hoveredIcon === index ? "#fff" : color,
+                // height: "35px", width: "35px "
+              }}
+            />
+          </a>
+        ))}
+      </div>
+      {/* SOCIAL_ICONS  END*/}
+
+      {/* Video Series Start */}
+      
+      <Cards />
     </div>
   );
 }
