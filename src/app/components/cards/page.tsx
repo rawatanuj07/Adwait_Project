@@ -136,7 +136,7 @@ export default function Cards() {
       <h1 className="font-medium text-2xl my-4 py-2">Video Series</h1>
       <hr className="mt-1 h-[0.5px] w-full bg-gray-separator tab:mt-2" />
       <div className="flex flex-wrap ">
-        {courseData.map((course, index) => (
+        {courseData.map((course) => (
           <div
             key={course.id}
             className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-2"
