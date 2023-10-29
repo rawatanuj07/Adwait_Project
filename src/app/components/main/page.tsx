@@ -50,7 +50,7 @@ export default function Main() {
     <div className="mx-5">
       <h1 className="font-bold text-2xl my-4 py-2">{heading}</h1>
       <div style={{ display: "flex" }}>
-      <Image src="/assets/image.jpg" alt="Example Image" width={1800} height={1000} padding-Right={0} margin-Right={0} style={{ borderRadius: '4px' }}/>
+      <Image src="/assets/image.jpg" alt="Example Image" width={1800} height={1000}  style={{ borderRadius: '4px' }}/>
         <div style={{ marginLeft: '15px', marginTop: '5px' , paddingTop: '0px' }}>
           <h1
             style={{ display: "flex",  }}

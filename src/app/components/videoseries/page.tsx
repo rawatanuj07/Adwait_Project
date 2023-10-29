@@ -17,7 +17,7 @@ type YourCourseType = {
   subtitle: string;
   coursesCount: number;
 
-  thumbnail: {};
+  thumbnail: string;
 };
 const Card = ({
   thumbnail,
@@ -29,11 +29,13 @@ const Card = ({
     <div>
       <a
         href="#"
-        className="block max-w-sm p-6 bg-white border-b rounded-lg  hover:bg-slate-100 light:bg-slate-800 light:border-gray-700 light:hover:bg-slate-700 border-t-0"
+        className="block max-w-l p-6 bg-white border-b rounded-lg  hover:bg-slate-100 light:bg-slate-800 light:border-gray-700 light:hover:bg-slate-700 border-t-0"
       >
         <Image
-          src={thumbnail}
-          alt="Example Image"
+          src={ thumbnail }
+          alt={thumbnail}
+          width={200}
+          height={200}
           style={{ borderRadius: "4px" }}
         />
 
@@ -67,17 +69,17 @@ export default function VideoSeries() {
       </h1>
       <hr className="mt-1 h-[0.5px] w-full bg-gray-separator tab:mt-2" />
       <div className="flex flex-wrap ">
-        {relatedData.map((course: any) => (
+        {relatedData.map((coursess: any) => (
           <div
-            key={course}
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-2"
+            key={coursess.id}
+            className="w-half sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2"
           >
             <Card
-              // key={course.id}
-              title={course.title}
-              subtitle={course.subtitle}
-              thumbnail={course.thumbnail}
-              coursesCount={course.coursesCount}
+              key={coursess.id}
+              title={coursess.title}
+              subtitle={coursess.subtitle}
+              thumbnail={coursess.thumbnail.domain + "/" +coursess.thumbnail.basePath + "/10/"  + coursess.thumbnail.key}
+              coursesCount={coursess.coursesCount}
             />
           </div>
         ))}
