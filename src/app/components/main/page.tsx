@@ -2,6 +2,9 @@
 import { useEffect, useState } from "react";
 import Cards from "../cards/page";
 import Image from "next/image";
+import VideoSeries from "../videoseries/page";
+import StickyNavbar from "../stickyNav/page";
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -47,6 +50,7 @@ export default function Main() {
     { Component: FaLinkedinIn, color: "#0077b5" },
   ];
   return (
+    
     <div className="mx-5">
       <h1 className="font-bold text-2xl my-4 py-2">{heading}</h1>
       <div style={{ display: "flex" }}>
