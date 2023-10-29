@@ -37,6 +37,7 @@ export default function Main() {
     width: "30px",
     height: "30px",
     borderRadius: "50%",
+
     color: "#fff",
     textAlign: "center",
     lineHeight: "40px",
@@ -50,53 +51,64 @@ export default function Main() {
     { Component: FaLinkedinIn, color: "#0077b5" },
   ];
   return (
-    
-    <div className="mx-5">
-      <h1 className="font-bold text-2xl my-4 py-2">{heading}</h1>
-      <div style={{ display: "flex" }}>
-      <Image src="/assets/image.jpg" alt="Example Image" width={1800} height={1000}  style={{ borderRadius: '4px' }}/>
-        <div style={{ marginLeft: '15px', marginTop: '5px' , paddingTop: '0px' }}>
-          <h1
-            style={{ display: "flex",  }}
-            className="font-normal text-2xl my-4 mt-0"
+    <div>
+              <hr className="mt-1 h-[0.5px] w-full bg-gray-separator tab:mt-2" />
+
+      <div className="mx-5">
+
+        <h1 className="font-bold text-2xl my-4 py-2">{heading}</h1>
+        <div style={{ display: "flex" }}>
+          <Image
+            src="/assets/image.jpg"
+            alt="Example Image"
+            width={1800}
+            height={1000}
+            style={{ borderRadius: "4px" }}
+          />
+          <div
+            style={{ marginLeft: "15px", marginTop: "5px", paddingTop: "0px" }}
           >
-            {subtitle}
-          </h1>
-          <h1 style={{ display: "flex",  }}>
-            {description}
-          </h1>
+            <h1
+              style={{ display: "flex" }}
+              className="font-normal text-2xl my-4 mt-0"
+            >
+              {subtitle}
+            </h1>
+            <h1 style={{ display: "flex" }}>{description}</h1>
+          </div>
         </div>
+
+        {/* SOCIAL_ICONS  START*/}
+        <div>
+          <h1 style={{ marginLeft: "10px ", marginTop: "10px" }}>
+            Share this series:
+          </h1>
+
+          {icons.map(({ Component, color }, index) => (
+            <a
+              href="#"
+              key={index}
+              onMouseEnter={() => setHoveredIcon(index)}
+              onMouseLeave={() => setHoveredIcon(null)}
+            >
+              <Component
+                style={{
+                  ...iconStyle,
+                  backgroundColor: hoveredIcon === index ? color : "#fff",
+                  color: hoveredIcon === index ? "#fff" : color,
+                  // height: "35px", width: "35px "
+                }}
+              />
+            </a>
+          ))}
+        </div>
+        {/* SOCIAL_ICONS  END*/}
+
+        {/* Video Series Start */}
+
+        <Cards />
       </div>
-
-      {/* SOCIAL_ICONS  START*/}
-      <div>
-        <h1 style={{ marginLeft: "10px ", marginTop: "10px" }}>
-          Share this series:
-        </h1>
-
-        {icons.map(({ Component, color }, index) => (
-          <a
-            href="#"
-            key={index}
-            onMouseEnter={() => setHoveredIcon(index)}
-            onMouseLeave={() => setHoveredIcon(null)}
-          >
-            <Component
-              style={{
-                ...iconStyle,
-                backgroundColor: hoveredIcon === index ? color : "#fff",
-                color: hoveredIcon === index ? "#fff" : color,
-                // height: "35px", width: "35px "
-              }}
-            />
-          </a>
-        ))}
-      </div>
-      {/* SOCIAL_ICONS  END*/}
-
-      {/* Video Series Start */}
-      
-      <Cards />
+      <VideoSeries />
     </div>
   );
 }

@@ -22,6 +22,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  z-index: 100;
 `;
 
 const LogoContainer = styled.div`
@@ -98,6 +99,7 @@ const StickyNavbar = () => {
 
       <LoginButton>Login</LoginButton>
     </NavbarContainer>
+    
   );
 };
 
