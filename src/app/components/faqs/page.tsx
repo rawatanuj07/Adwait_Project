@@ -2,11 +2,6 @@
 import React, { PropsWithChildren, useEffect, useState } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
-type CardProps = {
-    question: string;
-    answer: string;
-    
-  };
   type YourCourseType = {
     question: string;
     answer: string;
@@ -14,36 +9,66 @@ type CardProps = {
   };
 
 
-export default function Akordion() {
-  const [faq, setFaq] = useState<YourCourseType[]>([]);
+export default function Faq() {
+  const [accordion, setAccordion] = useState<YourCourseType[]>([]);
   useEffect(() => {
     fetch(
       "https://api.acharyaprashant.org/v2/legacy/courses/faqs?language=hindi"
     )
       .then((response) => response.json())
       .then((data) => {
-        // Filter the data to select items where "parent" is equal to 0
         console.log("Akordion is", data);
-        setFaq(data);
-        // setHeading(data.details.title);
-        // setSubtitle(data.details.subtitle);
-        // console.log("subtitle is", data.details.subtitle);
-        // setDescription(data.details.description);
-        // console.log("MAInMAIn is", data[1]);
+        setAccordion(data);
+
       });
   }, []);
-  
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+
+  const handleAccordionClick = (id: string) => {
+    if (id === openAccordion) {
+      setOpenAccordion(null);
+    } else {
+      setOpenAccordion(id);
+    }
+  };
   return (
-    <div>
-      {faq.map((faqss: any) => (
+
+    <div style={{
+    height: "auto",
+    marginTop: "40px",
+    marginBottom: "40px",
+    }}>
+
+      <h1 style={{
+    height: "auto",
+    marginLeft: "40px",
+    marginTop: "40px",
+    marginBottom: "0px",
+    }}>FAQs</h1>
+      <h1>Can’t find the answer you’re looking for? Reach out to our support team.</h1>
+    <div style={{
+        marginLeft: "40%",
+        marginRight: "auto",
+       width: "700px",
+       marginTop: "40px",
+       marginBottom: "40px",
+      }}>
+        
+      {accordion.map((faqss: any) => (
         <Accordion key={faqss.question}>
-          <AccordionItem key={faqss.id} title={faqss.question}
+          <AccordionItem style={{
+      
+       marginTop: "40px",
+       marginBottom: "40px",
+      }} key={faqss.id} title={faqss.question}
+
           >
             {faqss.answer.replace(/<\/?p>/g, "")}
           </AccordionItem>
         </Accordion>
       ))}
     </div>
-    
+    </div>
+
   );
 }
