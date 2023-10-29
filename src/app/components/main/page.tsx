@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Cards from "../cards/page";
+import Image from "next/image";
 import {
   FaFacebookF,
   FaTwitter,
@@ -49,16 +50,15 @@ export default function Main() {
     <div className="mx-5">
       <h1 className="font-bold text-2xl my-4 py-2">{heading}</h1>
       <div style={{ display: "flex" }}>
-        <img src="/assets/image.jpg" alt="Example Image" />
-
-        <div>
+      <Image src="/assets/image.jpg" alt="Example Image" width={1800} height={1000} padding-Right={0} margin-Right={0} style={{ borderRadius: '4px' }}/>
+        <div style={{ marginLeft: '15px', marginTop: '5px' , paddingTop: '0px' }}>
           <h1
-            style={{ display: "flex", marginLeft: "200px " }}
-            className="font-normal text-2xl my-4 py-2"
+            style={{ display: "flex",  }}
+            className="font-normal text-2xl my-4 mt-0"
           >
             {subtitle}
           </h1>
-          <h1 style={{ display: "flex", marginLeft: "200px " }}>
+          <h1 style={{ display: "flex",  }}>
             {description}
           </h1>
         </div>

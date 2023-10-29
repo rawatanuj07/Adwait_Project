@@ -22,8 +22,11 @@ type YourCourseType = {
   amount: number;
   originalAmount: number;
   language: string;
-  series: {};
-  order: any;
+  series: {
+    order: {
+      seq: number;
+    };
+  };
 
   // Add other properties as needed
 };
@@ -76,10 +79,10 @@ const Card = ({
           {time}
         </p>
         <p style={{ color: "#475569" }} className="flex-1 font-normal text-black-700 dark:text-black-400">
-          {amount} {originalAmount}
+          {amount}<span style={{ textDecoration: 'line-through' }}>{originalAmount}</span>
         </p>
-        <div style={{  backgroundColor:'#c7e6f8', width: '60px', borderRadius:'30%' }}>
-        <p style={{ color: "#475569",  width: '60px', marginLeft:'5px' }} className="flex-1 font-normal text-black-700 dark:text-black-400">
+        <div style={{  backgroundColor:'#c7e6f8', width: '40px', borderRadius:'4px' }}>
+        <p style={{ color: "#475569",  width: '60px', marginLeft:'5px', fontSize:'12px' }} className="flex-1 font-normal text-black-700 dark:text-black-400">
           {language}
         </p>
         </div>
@@ -102,7 +105,7 @@ const Card = ({
               marginLeft: "-220px",
              width: "10px"
             }}
-            href="/https://acharyaprashant.org/en/login?page=https%3A%2F%2Facharyaprashant.org%2Fen%2Fcourses%2Fseries%2Fcourse-series-eeb9d3"
+            href="https://acharyaprashant.org/en/login?page=https%3A%2F%2Facharyaprashant.org%2Fen%2Fcourses%2Fseries%2Fcourse-series-eeb9d3"
             className="flex-1 text-orange-600 text-sm font-medium mx-2 "
           >
             Enroll
@@ -130,7 +133,7 @@ export default function Cards() {
 
   return (
     <div>
-      <h1 className="font-normal text-2xl my-4 py-2">Video Series</h1>
+      <h1 className="font-medium text-2xl my-4 py-2">Video Series</h1>
       <hr className="mt-1 h-[0.5px] w-full bg-gray-separator tab:mt-2" />
       <div className="flex flex-wrap ">
         {courseData.map((course, index) => (
@@ -146,7 +149,7 @@ export default function Cards() {
                 (course.courseHours % 1) * 60
               )} mins`}
               amount={"₹ " + course.amount} // You can format amount as needed
-              originalAmount={<del>{`₹ ${course.originalAmount}`}</del>}
+              originalAmount={`₹ ${course.originalAmount}`}
               language={course.language.charAt(0).toUpperCase() + course.language.slice(1)}
                             seq={course.series.order.seq}
             />
