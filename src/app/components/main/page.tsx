@@ -4,7 +4,7 @@ import Cards from "../cards/page";
 import Image from "next/image";
 import VideoSeries from "../videoseries/page";
 import StickyNavbar from "../stickyNav/page";
-
+import Akordion from "../faqs/page";
 import {
   FaFacebookF,
   FaTwitter,
@@ -109,6 +109,7 @@ export default function Main() {
         <Cards />
       </div>
       <VideoSeries />
+      <Akordion />
     </div>
   );
 }
