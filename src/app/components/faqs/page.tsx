@@ -90,6 +90,8 @@ export default function Faq() {
         ))}
       </div>
       {/*  ACCORDION Ends */}
+      
     </div>
+    
   );
 }
