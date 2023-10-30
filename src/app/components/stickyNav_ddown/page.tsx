@@ -21,13 +21,12 @@ const DropdownContent = styled.div`
 
 const DropdownContainer = styled(Dropdown)`
   width: auto;
-  margin-left: 9px;
+  margin-left: 0px;
   height: 36px;
   margin-right: -14px;
   paddiing-right: 0px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  color: black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 `;
 
 // const DropdownOption = styled.a`
@@ -132,10 +131,10 @@ const SDdown = () => {
     <DropdownContainer>
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className=" inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          <Menu.Button className=" inline-flex w-full justify-center gap-x-1.5  bg-white px-3 py-2 text-sm font-semibold text-gray-600  ring-1 ring-inset ring-gray-300 hover:bg-gray-50" style={{ borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }}>
             All
             <ChevronDownIcon
-              className="-mr-1 h-5 w-5 text-gray-400"
+              className="-mr-1 h-5 w-5 text-gray-600"
               aria-hidden="true"
             />
           </Menu.Button>

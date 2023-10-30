@@ -23,6 +23,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   padding: 10px 20px;
   z-index: 100;
+  border-radius: 0px 0px 10px 10px;
 `;
 
 const LogoContainer = styled.div`
@@ -42,18 +43,20 @@ const SearchContainer = styled.div`
   background-color: white;
   padding-left: 0px;
   margin-right: 800px;
-  margin-left: -45px;
+  margin-left: -25px;
   font-color: gray;
   height: 36px;
-  border: 1px solid grey;
-`;
-
+  `;
+  // border-radius: 5px;
 const SearchField = styled.input`
-  border: none;
-  background-color: transparent;
-  width: 200px;
+  border-top: 0.8px solid #9CA3AF;
+  border-bottom: 0.5px solid #9CA3AF;
+  color: black;
+  width: 210px;
   padding: 5px;
-  margin-left: 0px;
+  margin-left: 10px;
+  text-indent: 5px;
+
 `;
 
 const SearchButton = styled.button`
@@ -62,9 +65,8 @@ const SearchButton = styled.button`
   border: none;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  padding: 5px 10px;
+  padding: 10px 20px;
   cursor: pointer;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 `;
 
 const LoginButton = styled.button`
@@ -76,29 +78,45 @@ const LoginButton = styled.button`
   margin-left: 10px;
   cursor: pointer;
 `;
-
 const SearchIcon = styled(FaSearch)`
   margin-right: 8px;
+  color: #555555;
 `;
+const NavbarWrapper = styled.div`
+display: flex;
+flex-direction: column;
+position: sticky;
+top: 0;
+background-color: white;
+z-index: 100;
 
+`;
 const StickyNavbar = () => {
   return (
+    <NavbarWrapper>
+
     <NavbarContainer>
+
       <LogoContainer>
         <Logo src="/assets/logo.png" alt="Logo" />
       </LogoContainer>
 
-      <SDdown />
-
       <SearchContainer>
-        <SearchField type="text" placeholder="Search" />
+        <SDdown />
+
+        <SearchField type="text" placeholder="Search for video series"/>
         <SearchButton>
           <SearchIcon />
         </SearchButton>
       </SearchContainer>
 
       <LoginButton>Login</LoginButton>
+
+
+
     </NavbarContainer>
+     <hr className="mt-1 h-[0.5px] w-full bg-gray-separator tab:mt-2" />
+     </NavbarWrapper>
     
   );
 };
