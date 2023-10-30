@@ -79,7 +79,7 @@ const Card = ({
           {time}
         </p>
         <p style={{ color: "#475569" }} className="flex-1 font-normal text-black-700 dark:text-black-400">
-          {amount}<span style={{ textDecoration: 'line-through' }}>{originalAmount}</span>
+          {amount }<span style={{ textDecoration: 'line-through' }}>{originalAmount}</span>
         </p>
         <div style={{  backgroundColor:'#c7e6f8', width: '40px', borderRadius:'4px' }}>
         <p style={{ color: "#475569",  width: '60px', marginLeft:'5px', fontSize:'12px' }} className="flex-1 font-normal text-black-700 dark:text-black-400">
@@ -148,8 +148,8 @@ export default function Cards() {
               time={`${Math.floor(course.courseHours)} hours ${Math.round(
                 (course.courseHours % 1) * 60
               )} mins`}
-              amount={"₹ " + course.amount} // You can format amount as needed
-              originalAmount={`₹ ${course.originalAmount}`}
+              amount={"Contribution: ₹" + course.amount + "    "} // You can format amount as needed
+              originalAmount={` ₹${course.originalAmount}`}
               language={course.language.charAt(0).toUpperCase() + course.language.slice(1)}
                             seq={course.series.order.seq}
             />

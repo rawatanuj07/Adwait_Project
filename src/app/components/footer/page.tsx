@@ -12,22 +12,22 @@ export default function Footer() {
             </h1>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Bhagavad Gita
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Sant Sarita
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Ashtavakra Samhita
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Bodh Pratyusha
                 </a>
               </li>
@@ -39,22 +39,22 @@ export default function Footer() {
             </h1>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Video Series
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   AP Books
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   AP Articles
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   AP Circle
                 </a>
               </li>
@@ -66,27 +66,27 @@ export default function Footer() {
             </h1>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   About Acharya Prashant
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Invite Him
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Interview Him
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Ghar Ghar Upanishad
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Media and Public Interaction
                 </a>
               </li>
@@ -98,7 +98,7 @@ export default function Footer() {
             </h1>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   For English
                 </a>
               </li>
@@ -191,7 +191,7 @@ export default function Footer() {
               </li>
 
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   For Hindi
                 </a>
               </li>
@@ -294,7 +294,7 @@ export default function Footer() {
             </h1>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   Acharya Prashant
                 </a>
               </li>
@@ -331,17 +331,17 @@ export default function Footer() {
             </h1>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   support@advait.org.in
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   +91 9650585100
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#"  style={{ color: "white" }} onMouseEnter={(e) => e.target.style.color = '#d24115'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+              <a href="#" style={{ color: "white" }} onMouseEnter={(e) => (e.target as HTMLAnchorElement).style.color = '#d24115'} onMouseLeave={(e) => (e.target as HTMLAnchorElement).style.color = 'white'}>
                   +91 9650585100
                 </a>
               </li>
