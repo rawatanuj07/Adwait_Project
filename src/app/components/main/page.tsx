@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 import Cards from "../cards/page";
 import Image from "next/image";
 import VideoSeries from "../videoseries/page";
-import StickyNavbar from "../stickyNav/page";
 import Faq from "../faqs/page";
-import Footer from "../footer/page";
 import {
   FaFacebookF,
   FaTwitter,
@@ -110,7 +108,6 @@ export default function Main() {
       </div>
       <VideoSeries />
       <Faq />
-      <Footer />
     </div>
   );
 }

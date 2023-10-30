@@ -143,6 +143,7 @@ const RightButton = styled.button`
   margin-left: 10px;
   width: auto;
 `;
+
 const Navbar = () => {
   // Use state to keep track of the selected page with a default value of 3
   const [selectedPage, setSelectedPage] = useState(0);
