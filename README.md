@@ -1,7 +1,7 @@
 # <span style="font-size: 2em;"> 🚀 Hi there! Welcome to my Next.js project! </span>
 
 
-- ⚡️ My name is Anuj Rawat and this is a Next.js project. I used create-next-app to bootstrap this project and get started quickly.
+- ⚡️ My name is Anuj Rawat. I used create-next-app to bootstrap this project and get started quickly.
 
 To get started, follow these steps:
 
